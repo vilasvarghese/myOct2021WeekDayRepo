@@ -2,7 +2,9 @@ node {
     
     def mvnHome = tool 'Maven3'
 
-
+    stage ("start") {
+        slackSend channel: 'oct-2021-weekend-batch', message: 'Jenkins build just started'
+    }
     stage ("Checkout") {
         checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: '32c69f66-f8ed-44c3-a327-45a09b6401f8', url: 'https://github.com/akannan1087/myOct2021WeekDayRepo']]])
     }
