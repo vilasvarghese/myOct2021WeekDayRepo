@@ -5,7 +5,7 @@
           <meta content="text/html; charset=utf-8" />
     </head> 
 <body>
-<h2> Hi All! We are extending our CICD capability by implementing Scripted Pipeline!!!! </h2>
-<h2>Pipelines are really awesome to learn!!!</h2>
+<h2> Hi All! We are migrating this webapp into Azure cloud by using Azure DevOps Pipeline!!!! </h2>
+<h2>Learning Azure is really easy compared to AWS cloud!!!</h2>
 </body>
 </html>
