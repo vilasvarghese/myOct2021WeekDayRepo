@@ -19,7 +19,9 @@ steps:
     mavenVersionOption: 'Default'
     mavenAuthenticateFeed: false
     effectivePomSkip: false
-    
+    sonarQubeRunAnalysis: true
+    sqMavenPluginVersionChoice: 'latest'
+
 - task: SonarQubePrepare@5
   inputs:
     SonarQube: 'mysonar'
