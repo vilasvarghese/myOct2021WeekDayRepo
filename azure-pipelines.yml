@@ -16,6 +16,11 @@ steps:
     scannerMode: 'Other'
     projectKey: "MyWebApp"
     projectName: "MyJavaWebApp"
+    extraProperties: |
+      # Additional properties that will be passed to the scanner, 
+      # Put one key=value per line, example:
+      # sonar.exclusions=**/*.bin
+      sonar.branch.name=main
 - task: Maven@3
   inputs:
     mavenPomFile: 'MyWebApp/pom.xml'
@@ -28,6 +33,4 @@ steps:
     sonarQubeRunAnalysis: true
     sqMavenPluginVersionChoice: 'latest'
     
-
-
 - task: SonarQubeAnalyze@5
