@@ -1,2 +1,1 @@
-# myOct2021WeekDayRepo
-# READ ME file
+# myOct2021WeekDayRepo - My WebApp 
