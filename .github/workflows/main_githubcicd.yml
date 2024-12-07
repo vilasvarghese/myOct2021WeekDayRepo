@@ -20,15 +20,17 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: '11'
+          distribution: 'adopt'          
+          
 
       - name: Build with Maven
-        run: mvn clean install
+        run: mvn clean install -f MyWebApp/pom.xml
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
-          name: java-app
-          path: '${{ github.workspace }}/target/*.war'
+          name: githubcicd
+          path: '${{ github.workspace }}'
 
   deploy:
     runs-on: ubuntu-latest
